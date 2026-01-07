@@ -117,12 +117,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="{{ route('logout') }}">
-                        <svg class="bi">
-                            <use xlink:href="#logout"/>
-                        </svg>
-                        Sign out
-                    </a>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="nav-link d-flex align-items-center gap-2">
+                            <i class="bi bi-box-arrow-right"></i> Logout
+                        </button>
+                    </form>
                 </li>
             </ul>
         </div>
